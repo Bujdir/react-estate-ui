@@ -19,13 +19,15 @@ function SearchBar() {
     <div className="searchBar">
       <div className="type">
         {TYPES.map((type) => {
-          <button
-            key={type}
-            onClick={() => switchType(type)}
-            className={query.type === type ? "active" : ""}
-          >
-            {type}
-          </button>;
+          return (
+            <button
+              key={type}
+              onClick={() => switchType(type)}
+              className={query.type === type ? "active" : ""}
+            >
+              {type}
+            </button>
+          );
         })}
       </div>
       <form>
